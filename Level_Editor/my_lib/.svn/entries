@@ -1,0 +1,238 @@
+10
+
+dir
+0
+svn+ssh://kscm@koala-rendus.epitech.net/my_printf-2017-lambol_a/my_printf/my_lib
+svn+ssh://kscm@koala-rendus.epitech.net/my_printf-2017-lambol_a
+add
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+fed1ae20-c8b2-4e9d-98b9-fbf200502a18
+
+my_str_to_wordtab.c
+file
+
+
+
+add
+
+my_strcat.c
+file
+
+
+
+add
+
+my_putstr.c
+file
+
+
+
+add
+
+my_strstr.c
+file
+
+
+
+add
+
+my_strncpy.c
+file
+
+
+
+add
+
+my_square_root.c
+file
+
+
+
+add
+
+my_str_isprintable.c
+file
+
+
+
+add
+
+my_isneg.c
+file
+
+
+
+add
+
+
+
+
+
+has-props
+has-prop-mods
+
+my_putchar.c
+file
+
+
+
+add
+
+my_strlen.c
+file
+
+
+
+add
+
+my_strcmp.c
+file
+
+
+
+add
+
+my_put_nbr.c
+file
+
+
+
+add
+
+
+
+
+
+has-props
+has-prop-mods
+
+my_str_isalpha.c
+file
+
+
+
+add
+
+my_strupcase.c
+file
+
+
+
+add
+
+my_swap.c
+file
+
+
+
+add
+
+my_strncat.c
+file
+
+
+
+add
+
+my_strcapitalize.c
+file
+
+
+
+add
+
+my_str_isupper.c
+file
+
+
+
+add
+
+my_str_lower.c
+file
+
+
+
+add
+
+my_getnbr.c
+file
+
+
+
+add
+
+my_str_isnum.c
+file
+
+
+
+add
+
+my_strcpy.c
+file
+
+
+
+add
+
+my.h
+file
+
+
+
+add
+
+my_revstr.c
+file
+
+
+
+add
+
+my_power_rec.c
+file
+
+
+
+add
+
+my_strncmp.c
+file
+
+
+
+add
+
+my_strlowcase.c
+file
+
+
+
+add
+
+Makefile
+file
+
+
+
+add
+
