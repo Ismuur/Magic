@@ -5,7 +5,7 @@
 ** Login   <lambol_a@epitech.net>
 **
 ** Started on  Wed Apr 24 09:51:04 2013 aymeric lambolez
-** Last update Wed Apr 24 12:07:54 2013 aymeric lambolez
+** Last update Wed Apr 24 17:31:09 2013 eric hu
 */
 
 #include "projet.h"
@@ -42,8 +42,8 @@ void	load_map(char *path)
 	}
       y++;
     }
-  map.maxX = (map.maxX + 1) * TILE_SIZE;
-  map.maxY = (map.maxY + 1) * TILE_SIZE;
+  map.maxX = map.maxX * TILE_SIZE;
+  map.maxY = map.maxY * TILE_SIZE;
   map.startX = 0;
   map.startY = 0;
   fclose(fp);
@@ -68,7 +68,7 @@ void	draw_map()
   x2 = x1 + WIDTH + (x1 == 0 ? 0 : TILE_SIZE);
   mapY = map.startY / TILE_SIZE;
   y1 = (map.startY % TILE_SIZE) * -1;
-  y2 = y2 + HEIGHT + (y1 == 0 ? 0 : TILE_SIZE);
+  y2 = y1 + HEIGHT + (y1 == 0 ? 0 : TILE_SIZE);
   y = y1;
   while (y <= y2)
     {
@@ -86,4 +86,61 @@ void	draw_map()
       mapY++;
       y += TILE_SIZE;
     }
+
+  /* Affichage tile sélectionnée */
+  ysource = cursor.tileID / 10 * TILE_SIZE;
+  xsource = cursor.tileID % 10 * TILE_SIZE;
+  draw_tile(map.tile_set, cursor.x, cursor.y, xsource, ysource);
+}
+
+void	save_map(char *name)
+{
+  int	x;
+  int	y;
+  FILE	*fp;
+
+  if ((fp = fopen(name, "wb")) == NULL)
+    {
+      printf("Failed to open map %s\n", name);
+      exit(EXIT_FAILURE);
+    }
+  y = 0;
+  while (y < MAX_MAP_Y)
+    {
+      x = 0;
+      while (x < MAX_MAP_X)
+	{
+	  fprintf(fp, "%d ", map.tile_tab[y][x]);
+	  x++;
+	}
+      fprintf(fp, "\n");
+      y++;
+    }
+  fclose(fp);
+}
+
+void	reinit_map(char *name)
+{
+  int	x;
+  int	y;
+  FILE	*fp;
+
+  if ((fp = fopen(name, "wb+")) == NULL)
+    {
+      printf("Failed to open map %s\n", name);
+      exit(EXIT_FAILURE);
+    }
+  y = 0;
+  while (y < MAX_MAP_Y)
+    {
+      x = 0;
+      while (x < MAX_MAP_X)
+	{
+	  fprintf(fp, "0 ");
+	  x++;
+	}
+      fprintf(fp, "\n");
+      y++;
+    }
+  fclose(fp);
 }

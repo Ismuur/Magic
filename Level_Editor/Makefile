@@ -5,7 +5,7 @@
 ## Login   <lambol_a@epitech.net>
 ## 
 ## Started on  Mon Feb  4 13:36:43 2013 aymeric lambolez
-## Last update Wed Apr 24 10:17:42 2013 aymeric lambolez
+## Last update Wed Apr 24 17:35:40 2013 eric hu
 ##
 
 SRC	=	main.c\
@@ -16,7 +16,7 @@ SRC	=	main.c\
 
 OBJ	=	$(SRC:.c=.o)
 
-NAME	=	test
+NAME	=	Level_editor
 
 RM	=	rm -f
 
@@ -31,6 +31,7 @@ all:		$(NAME)
 $(NAME):	$(OBJ)
 	cd my_lib && $(MAKE) re
 	$(CC) -o $(NAME) $(OBJ) $(LIBS) $(CFLAG)
+	cp $(NAME) ../
 
 libclean:
 	cd my_lib && $(MAKE) clean

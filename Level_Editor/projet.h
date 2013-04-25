@@ -5,7 +5,7 @@
 ** Login   <lambol_a@epitech.net>
 **
 ** Started on  Fri Apr 12 16:01:27 2013 aymeric lambolez
-** Last update Wed Apr 24 10:35:28 2013 aymeric lambolez
+** Last update Wed Apr 24 17:16:53 2013 eric hu
 */
 
 #ifndef PROJET_H_
@@ -23,7 +23,8 @@
 # define MAX_MAP_X 400
 # define MAX_MAP_Y 300
 # define TILE_SIZE 32
-
+# define BLANK_TILE 0
+# define MAX_TILES 10
 typedef struct	s_event
 {
   int		up;
@@ -35,6 +36,16 @@ typedef struct	s_event
   int		enter;
   int		erase;
   int		pause;
+  int		add;
+  int		remove;
+  int		previous;
+  int		next;
+  int		load;
+  int		save;
+  int		copy;
+  int		reinit;
+  int		mouseX;
+  int		mouseY;
 }		t_event;
 
 typedef struct	s_all
@@ -53,21 +64,29 @@ typedef struct	s_map
   int		tile_tab[MAX_MAP_Y][MAX_MAP_X];
 }		t_map;
 
-t_event	ev;
-t_all	game;
-t_map	map;
+typedef struct	s_cursor
+{
+  int		x;
+  int		y;
+  int		tileID;
+}		t_cursor;
 
-void	my_exit(char *str);
-void	init(char *title);
-void	end();
-int	main();
-void	gere_key();
-void	draw();
-void	delay(unsigned int limit);
-void	load_game();
-void	draw_image(SDL_Surface *image, int x, int y);
+t_event		ev;
+t_all		game;
+t_map		map;
+t_cursor	cursor;
+
+void		my_exit(char *str);
+void		init(char *title);
+void		end();
+int		main();
+void		gere_key();
+void		draw();
+void		delay(unsigned int limit);
+void		load_game();
+void		draw_image(SDL_Surface *image, int x, int y);
 SDL_Surface	*load_image(char *path);
-void	load_map(char *);
+void		load_map(char *);
 
 
 #endif /* PROJET_H_  */

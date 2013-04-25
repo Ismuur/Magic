@@ -5,7 +5,7 @@
 ** Login   <lambol_a@epitech.net>
 **
 ** Started on  Fri Apr 12 11:03:17 2013 aymeric lambolez
-** Last update Wed Apr 24 11:53:26 2013 aymeric lambolez
+** Last update Wed Apr 24 13:34:27 2013 eric hu
 */
 
 #include "projet.h"
@@ -17,7 +17,7 @@ int		main()
 
   frame_limit = SDL_GetTicks() + 16;
   go = 1;
-  init("Jeu test");
+  init("Level Editor");
   load_game();
   atexit(end);
   while (go)
