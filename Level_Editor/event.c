@@ -5,7 +5,7 @@
 ** Login   <lambol_a@epitech.net>
 **
 ** Started on  Thu Apr 18 09:55:32 2013 aymeric lambolez
-** Last update Wed Apr 24 17:42:37 2013 eric hu
+** Last update Thu Apr 25 15:58:37 2013 eric hu
 */
 
 #include "projet.h"
@@ -51,9 +51,9 @@ void		gere_key()
 	      break;
 
 	      /* Touche Suppr : Réinitialisation de la map */
-	    case SDLK_DELETE:
+	      /*case SDLK_DELETE:
 	      ev.reinit = 1;
-	      break;
+	      break;*/
 	    default:
 	      break;
 	    }
@@ -97,9 +97,9 @@ void		gere_key()
 	      break;
 
 	      /* Clic droit : Copie la tile sélectionnée */
-	    case SDL_BUTTON_RIGHT:
+	      /*case SDL_BUTTON_RIGHT:
 	      ev.copy = 1;
-	      break;
+	      break;*/
 
 	      /* Roue souris : Défilement des tiles */
 	    case SDL_BUTTON_WHEELUP:
